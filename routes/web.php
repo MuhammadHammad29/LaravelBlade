@@ -16,7 +16,7 @@ Route::get('/post', function () {
 
 route::view(view ka naam,route ka naam) oopar wala kaam 1 line main*/
 
-Route::middleware('auth')->view('post','/post');
+//Route::middleware('auth')->view('post','/post');
 
 Route::middleware('auth')->name('student.')->prefix('student')->group(function() {
     Route::get('/', [StudentController::class, 'index'])->name('index');
@@ -34,9 +34,9 @@ Route::middleware('auth')->name('course.')->prefix('course')->group(function() {
 });
 
 
-Route::get('/post/first', function () {
-    return view('firstpost');
-}); 
+//Route::get('/post/first', function () {
+//    return view('firstpost');
+//}); 
 
 Route::get('/dashboard', function () {
     return view('dashboard');
